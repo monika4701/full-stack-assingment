@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practical-6</title>
     <style>
-        .contain{
+        .box{
             width: 320px;
              height: 500px;
              background-color: black;
              margin: 10px;
              border-radius: 10px;
+             float: left;
         }
-        .contain h3{
-           color: red;
+        .box h3{
+           color: olive;
            text-align: center;
            margin-top: 10px;
 
         }
 
-        .contain img{
+        .box img{
             width: 280px;
             border: 5px solid rebeccapurple;
             margin: 10px;
             border-radius: 10px;
             
         }
-        .contain p{
+         .box p{
             color:seashell;
             font-family:Georgia, 'Times New Roman', Times, serif;
             margin: 20px;
             max-width: 280px;
         }
-        .contain a{
+        .box a{
             display: block;
             background-color: red;
             text-align: center;
@@ -42,14 +43,16 @@
             text-decoration: none;
             margin: 20px;
         }
+        .box a:hover{
+            background-color: royalblue;
+        }
         
         
     </style>
 </head>
 <body>
     <h1>Practical-6: Creating Layout Using CSS Layout Properties </h1>
-    <div class="contain">
-        <div class="box" id="box1">
+        <div class="box" >
             <img src="../image/Screenshot (27).png">
             <h3>Introduction to HTML</h3>
             <p>
@@ -58,7 +61,18 @@
              </p>
              <a href="prac5.html.html">Read More</a>
         </div>
-    </div>
+        <div class="box" >
+            <img src="../image/css3.png">
+            <h3>Introduction to CSS</h3>
+            <p>
+                Cascading Style Sheets, fondly referred to as CSS, 
+                is a simple design language intended to simplify the process of making web pages presentable. 
+                CSS handles the look and feel part of a web page. Using CSS, you can control 
+                the color of the text, the style of fonts, the spacing between paragraphs,how columns are sized and laid out
+             </p>
+             <a href="prac5-css.html">Read More</a>
+        </div>
+
     
 </body>
 </html>
