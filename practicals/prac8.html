@@ -14,7 +14,7 @@
         width: 100vw;
         padding: 10px;   
         }
-        #header{
+        #nav{
             width: 100%;
             height: 60px;
             border: 2px solid black;
@@ -24,10 +24,15 @@
            align-items: center;
            font-size: 30px;
            margin-bottom: 40px;
-           
-           
-           
-           
+           position: fixed;
+           top: 0px;
+           list-style: none;
+            overflow: hidden;
+            z-index: 5;
+             
+        }
+        #nav li a:hover{
+            background-color: lightslategray;
         }
         
         #header ul li{
@@ -36,17 +41,28 @@
             margin: 50px;
         }
         #banner img{
+            width: 100%;
+            height: 100%;
+            border: 2px solid black;
+            z-index: 1;
+            margin-top: 70px;
+            margin-bottom:30px ;
+           
+        }
+        #header{
+            margin-bottom: 30px;
+        }
+        #banner {
             width: 100vw;
             height: 100vh;
-            border: 2px solid black;
-            
-            
-           margin-bottom: 15px;
+            position: relative;
+            margin-bottom: 30px;
+            margin-top: 30px;
         }
         
          h1{
              text-align: center;
-             font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-family:"Arial, Helvetica, sans-serif";
          }
         #circle{
           /* border: 2px solid red;*/
@@ -56,7 +72,9 @@
             align-content: center;
             margin: 20px;
             
+            
         }
+        
         
         #circle-1 img{
             
@@ -89,16 +107,12 @@
             background-color: lightcoral;
             border-radius: 50%;
             width: 200px;
-            height: 180px;
+            height: 200px;
             float: left;
             border: 2px solid black;
         }
-        #section-1:after {
-            content: '';
-             display: block;
-             clear: both;
-             
-           }
+        
+           
            #about{
                /*border: 2px solid brown;*/
                display: flex;
@@ -113,7 +127,7 @@
                border: 2px solid black;
                font-size: 20px;
                margin-left:30px ;
-            margin-bottom: 20px;
+               margin-bottom: 20px;
            }
            #article{
                /*border: 2px solid red;*/
@@ -196,8 +210,6 @@
             background-color: royalblue;
         }
         
-           
-          
           
            #footer{
             width: 100%;
@@ -210,11 +222,10 @@
            margin-top: 20px;
             margin-bottom: 20px;
            }
-           #footer a{
-               display: block;
-           }
+           
            #container a{
                text-decoration: none;
+               
            }
            #header a{
                color: black;
@@ -231,13 +242,23 @@
              clear: both;
              
            }
+           #section-1{
+               margin-top: 20px;
+           }
+           #section-4:after {
+            content: '';
+             display: block;
+             clear: both;
+             
+           }
+           
     </style>
 </head>
 <body>
     <div id="container">
     <div id="header">
         
-        <ul>
+        <ul id="nav">
             <li><a href="#">Home</a></li>
             <li><a href="#section-2">About Us</a></li>
             <li><a href="#section-1">Team</a></li>
@@ -249,9 +270,10 @@
     <div id='banner'>
         <img src="../image/emile-perron-xrVDYZRGdw4-unsplash.jpg">
     </div>
+    <h1>Team Members</h1>
     
     <div id="section-1">
-        <h1><b>Team Members</b></h1>
+        <h1>Team Members</h1>
         <br>
         <div id="circle">
         <div id="circle-1">
@@ -333,13 +355,14 @@
 
     
         <h1>Contact</h1>
+        <div id="section-4">
         <div id="footer">
             
-           <p>Website Template for Practical-8 @Beta-Labs</p> 
-            
-               <p><a href="#header">Back to Top</a></p> 
-        
+           <p>Website Template for Practical-8  <a href="https://www.beta-labs.in/" target="_blank">&#169;Beta-Labs</a></p>
+           <a href="#">Back to Top</a>
     </div>
+    
+</div>
 </div>
 </body>
 </html>
