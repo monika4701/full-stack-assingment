@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practical-8</title>
+    <title>practical-9</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         *{
             margin: 0;
@@ -17,32 +18,36 @@
         margin: 0px auto;
         width: 100vw;
         padding: 10px;   
+        position: relative;
         }
         #nav{
             width: 100%;
-            height: 60px;
+            height: 64px;
             border: 2px solid black;
             background-color:lightcoral;
-            display: flex;
-            justify-content: center;
-           align-items: center;
+            line-height: 60px;
            font-size: 30px;
            margin-bottom: 40px;
            position: fixed;
            top: 0px;
            list-style: none;
-            overflow: hidden;
             z-index: 5;
              
         }
+        #nav::after {
+                content: "";
+                display: block;
+                clear: both;
+            }
         #nav li a:hover{
             background-color: lightslategray;
         }
         
         #header ul li{
-            display: flex;
-            float: left;
-            margin: 50px;
+            display: inline-block;
+            margin-left: 50px;
+            line-height: 60px;
+            
         }
         #banner img{
             width: 100%;
@@ -53,9 +58,7 @@
             margin-bottom:30px ;
            
         }
-        #header{
-            margin-bottom: 30px;
-        }
+        
         #banner {
             width: 100vw;
             height: 100vh;
@@ -89,32 +92,6 @@
             margin-right: 40px;
             border: 2px solid black;  
         }
-        #circle-2 img{
-            background-color: lightcoral;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            float: left;
-            margin-right: 40px;
-            border: 2px solid black;
-        }
-        #circle-3 img{
-            background-color: rgb(117, 226, 203);
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            float: left;
-            margin-right: 40px;
-            border: 2px solid black;
-        }
-        #circle-4 img{
-            background-color: lightcoral;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-            float: left;
-            border: 2px solid black;
-        }
         
            
            #about{
@@ -123,6 +100,7 @@
                flex-direction: row;
                margin-top: 20px;
             margin-bottom: 20px;
+            position: relative;
            }
            #margin{ 
                width: 82%;
@@ -138,6 +116,7 @@
                float: left;
                width: 40%;
                margin-left: 90px;
+               position: relative;
                
            }
            #box1 img{
@@ -233,7 +212,7 @@
            }
            #header a{
                color: black;
-               padding: 20px 30px ;
+               padding: 20px 50px ;
                text-align: center;
                
            }
@@ -258,8 +237,47 @@
              clear: both;
              
            }
-           
-           
+           #banner h1{
+               position: absolute;
+               top: 90px;
+               color: aquamarine;
+               margin-left: 70px;
+           }
+           #box1 h1{
+               position: absolute;
+               top: 20px;
+               
+
+           }
+           #box3 h1{
+               position: absolute;
+               bottom: 150px;
+               
+
+           }
+           #box2 h1{
+               position: absolute;
+               top: 240px;
+               
+           }
+           .shw-btn, .hide-btn{
+              font-size: 30px;
+              color:black;
+              line-height: 60px;
+              display: none;
+           }
+           #chk{
+               display: none;
+           }
+           .shw-btn{
+               
+               float: right;
+               margin-right: 20px;
+           }
+           .shw-btn :hover , .hide-btn:hover{
+               color: teal;
+               transition: 0.7s;
+           }
     </style>
 </head>
 <body>
@@ -267,15 +285,24 @@
     <div id="header">
         
         <ul id="nav">
+            <input type="checkbox"  id="chk">
+        <label for="chk" class="shw-btn">
+            <i class="fa fa-bars" ></i>
+        </label>
             <li><a href="#">Home</a></li>
             <li><a href="#section-2">About Us</a></li>
             <li><a href="#section-1">Team</a></li>
             <li><a href="#section-3">Technologies</a></li>
             <li><a href="#footer">Contact</a></li>
+            <input type="checkbox"  id="chk">
+        <label for="chk" class="hide-btn">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </label>
         </ul>
     
 </div>
     <div id='banner'>
+        <h1>Practical-9</h1>
         <img src="../image/emile-perron-xrVDYZRGdw4-unsplash.jpg">
     </div>
     <h1>Team Members</h1>
@@ -287,13 +314,13 @@
         <div id="circle-1">
             <img src="../image/9.png">
         </div>
-        <div id="circle-2">
+        <div id="circle-1">
             <img src="../image/2.png">
         </div>
-        <div id="circle-3">
+        <div id="circle-1">
             <img src="../image/1.png">
         </div>
-        <div id="circle-4">
+        <div id="circle-1">
             <img src="../image/3.png">
         </div>
     </div>
@@ -309,12 +336,15 @@
         </div>
         <div id="article">
             <div id="box1">
+                <h1>Project-1</h1>
                 <img src="../image/p1.jpg">
             </div>
             <div id="box2">
+                <h1>Project-2</h1>
                 <img src="../image/p2.jpeg">
             </div>
            <div id="box3">
+            <h1>Project-3</h1>
             <img src="../image/p3.jpg">
            </div>
         </div>
