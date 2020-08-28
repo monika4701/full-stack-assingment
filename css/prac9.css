@@ -682,7 +682,7 @@ position: relative;
            flex-wrap: wrap;
        }
        #box_1{
-        width: 220px;
+        width: 250px;
          height: 420px;
          background-color: black;
          margin: 15px 30px;
@@ -692,7 +692,7 @@ position: relative;
            
        }
        #box_1 img{
-        width: 95%;
+        width: 90%;
         border: 5px solid rebeccapurple;
         margin: 10px;
         border-radius: 10px;
