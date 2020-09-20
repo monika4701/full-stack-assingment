@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+        }
+        header{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            font-size: 40px;
+        }
+        body{
+            background-color:#e0e0e0;
+        }
+        main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+        .section-1,.section-2, .section-3{
+            border: 2px black solid;
+            width: 300px;
+            height: 380px;
+            background-color: white;
+        }
+        .section-1 .icon_box, .section-2 .icon_box{
+            background: linear-gradient(to right,#fbc02d,#f57f17,#e65100,#f4511e);
+            height: 105px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .icon_box h1{
+            font-size: 24px;
+            color: white;
+        }
+        .icon_box .icon{
+            flex-wrap: wrap;
+        }
+        .icon i{
+            font-size: 24px;
+            padding: 10px 14px;
+            color: whitesmoke;
+        }
+        .input{
+            padding: 20px;
+        }
+        input[type='email']{
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 13px 0px;
+            width: 100%;
+        }
+        input[type='password']{
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 13px 0px;
+            width: 100%;
+        }
+         .section-1 .input p,.section-2 .input p, .section-3  #forget{
+            font-size: 12px;
+            color: grey;
+            padding: 20px 0px;
+            text-align: right;
+        }
+        .input b{
+            color: black;
+        }
+        input[type='submit']{
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color:#e0e0e0;
+            margin-top: 30px;
+        }
+        .lastpara{
+            display: inline-block;
+            margin-left: 16px;
+        } 
+        .section-2 h1{
+            text-align: center;
+            padding: 15px;
+            color: crimson;
+        }
+        .section-2 .icon_box{
+            height: 84px;
+        }
+        .section-2 input[type='submit']{
+            margin-top: 10px;
+        }
+        .section-2 .para1{
+            display: inline-block;
+            margin-left: 5px;
+        }
+        .section-2 .icon_box{
+            background: linear-gradient(to right,#ce93d8,#aa00ff,#6a1b9a);
+        }
+        .section-2 input[type='submit']{
+            background-color:#ffb74d;
+        }
+        .section-2 b{
+            color: #01579b;
+        }
+        .section-3 h1{
+            text-align: center;
+            padding: 15px;
+        }
+        .section-3 input[type='submit']{
+            margin-top: 15px;
+            width: 100%;
+            background: linear-gradient(to right,#b2ebf2,#00acc1,#0288d1);;
+        }
+         .section-3 .para{
+            text-align: center;
+            margin-top: 20px;
+            color: grey;
+        }
+         
+        footer{
+            display: flex;
+            justify-content: center;   
+        }
+        .ic i{
+            padding: 10px ;
+            width: 60px;
+            border-radius: 20px;
+            font-size: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 5px grey;
+            color: cornflowerblue;
+            margin-right: 10px;
+        }
+        @media(max-width:480px) {
+            header{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            font-size: 30px;
+        }
+            main{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .section-2, .section-3{
+            margin-top: 60px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Form Templates</h1></header>
+    <main>
+    <section class="section-1">
+        <section class="icon_box">
+          <h1>Log in</h1>
+          <div class="icon">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        </section>
+        <section class="input">
+         <input type="email" name="email" placeholder="Your Email" required>
+         <br>
+         <input type="password" name="pwd" placeholder="Your Password" required>
+         <p>Forget <b>Password</b></p>
+         <input type="submit" value="Login ">
+         <p class="lastpara">Don't have an account? <b>Sign up</b></p>
+        </section>
+</section>
+<!--Template-2-->
+<section class="section-2">
+    <h1>Sign up</h1>
+    <section class="input">
+     <input type="email" name="email" placeholder="Your Email" required>
+     <br>
+     <input type="password" name="pwd" placeholder="Your Password" required>
+     <input type="checkbox">
+     <p class="para1">Accept the <B> Terms and Condition </B></p>
+     <input type="submit" value="Sign up ">
+     <p class="lastpara">Have an account? <b>Log in</b></p>
+    </section>
+    <section class="icon_box">
+        <div class="icon">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      </section>
+</section>
+<!--Template-3-->
+<section class="section-3">
+    <h1>Sign in</h1>
+    <section class="input">
+     <input type="email" name="email" placeholder="Your Email" required>
+     <br>
+     <input type="password" name="pwd" placeholder="Your Password" required>
+     <p id="forget">Forget <b>Password</b></p>
+     <input type="submit" value="Sign in ">
+     <p class="para">or Sign in with</p>
+    </section>
+    <footer>
+        <div class="ic">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    </footer>
+</section>
+</main>
+</body>
+</html>
