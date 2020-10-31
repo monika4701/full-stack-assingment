@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-15</title>
+</head>
+<STYLE>
+    body{
+        background-color: rgba(128, 128, 128, 0.842);
+    }
+    h1{
+        text-align: center;
+        margin-top: 100px;
+        font-size: 40px;
+    }
+    button{
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        margin: 15px 50px;
+        background-color: chartreuse ;
+        outline: none;
+       
+    }  
+    #count{
+        font-size: 40px;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    
+</STYLE>
+<body>
+    <h1>Counter</h1>
+    <main>
+    <button id="dec" onclick="minus()"><b>-</b></button>
+    <div id="count">0</div>
+    <button onclick="plus()"><b>+</b></button>
+    </main>
+    <script>
+      var x=parseInt(document.getElementById("count").innerHTML);
+      var btn = document.getElementById("dec");
+       btn.disabled = true;
+      function plus(){
+        x=x+1;
+        document.getElementById("count").innerHTML = x;
+        btn.disabled = false;
+      }
+      function minus(){
+        x=x-1;
+        document.getElementById("count").innerHTML = x;
+        if (x == 0) {
+                btn.disabled = true;
+            }
+      }
+    </script>
+</body>
+</html>
