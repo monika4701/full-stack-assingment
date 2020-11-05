@@ -12,6 +12,7 @@ todoList.onclick=checkdelete;
 
 //function
 function create(e){
+    if(todoInput.value != ""){
     e.preventDefault();
     var newDiv=document.createElement("div");
     newDiv.classList.add("todo");
@@ -19,7 +20,7 @@ function create(e){
     var newLi =document.createElement("li");
     newLi.classList.add("todo-item");
     newLi.innerHTML=todoInput.value;
-    todoInput.value=" ";
+    
     newDiv.appendChild(newLi);
 
     var checkbtn = document.createElement("button");
@@ -34,7 +35,14 @@ function create(e){
     newDiv.appendChild(deletebtn);
       
     todoList.appendChild(newDiv);
+    todoInput.value=" ";
 }
+
+else{
+    alert("input can't be Blank")
+}
+}
+
 function checkdelete(e) {
    var item =e.target;
    if(item.classList[0]==="deletebtn"){
