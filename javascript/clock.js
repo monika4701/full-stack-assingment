@@ -50,7 +50,7 @@ function setGreeting()
     }
     else
     {
-        document.body.style.backgroundImage='url("../image/Sunset.jpg")';
+        document.body.style.backgroundImage='url("https://www.holidify.com/images/cmsuploads/compressed/sunrise-1883901_20190614105502.jpg")';
         greeting.innerHTML="Good Evening";
         document.body.style.color="#ff704d";
     }
