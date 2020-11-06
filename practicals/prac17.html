@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Clock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: 'Quicksand', sans-serif;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+
+        }
+        #time{
+            font-size: 8rem /*8rem=8*16px*/;
+        }
+        h1{
+            margin-bottom: 16px;
+        }
+        h2{
+            font-size: 48px;
+            opacity: .5;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <time id="time"></time>
+     <h1 id="greeting"></h1>
+     <H2 id="name" contenteditable="true"></H2>
+     <h3 id="day"></h3>
+
+     <script src="../javascript/clock.js"></script>
+
+     
+</body>
+</html>
